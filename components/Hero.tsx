@@ -2,54 +2,71 @@
 import React from "react";
 import { useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
-import ProfilePicture from "../images/profile-pic.png";
 import Image from "next/image";
-import Link from "next/link";
+import ProfilePic from "../images/profile-pic.png";
+import { motion } from "framer-motion";
 
 type Props = {};
 
 function Hero({}: Props) {
-  const [text, count] = useTypewriter({
-    words: ["Hi, my name is Łukasz!", "I love to code.", "Contact me :)"],
+  const [text] = useTypewriter({
+    words: [
+      "",
+      "Hi, The Name's Łukasz",
+      "Guy-who-loves-Cycling.tsx",
+      "<ButLovesToCodeMore />",
+    ],
     loop: true,
     delaySpeed: 2000,
   });
 
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+    <div className="min-h-screen md:h-screen flex flex-col space-y-8 items-center justify-center text-center -mt-[90px] overflow-hidden">
       <BackgroundCircles />
       <Image
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src={ProfilePicture}
-        alt="picture"
-        width={128}
-        height={128}
+        src={ProfilePic}
+        alt="Profile picture of the author"
       />
 
-      <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        className="z-20"
+      >
+        <h1 className="text-sm uppercase text-gray-500 pb-2 tracking-[8px] sm:tracking-[16px] -mr-2 sm:-mr-4">
           Frontend Developer
-        </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
-          <span className="mr-3">{text}</span>
-          <span className="text-[#F7AB0A] animate-blinking">|</span>
         </h1>
+        <p className="text-2xl sm:text-4xl md:text-6xl font-semibold">
+          <span className="font-mono">{text}</span>
+          <svg
+            width="20"
+            height="75"
+            className="ml-[4px] mr-[4px] sm:ml-[8px] sm:mr-[8px] inline-block animate-blinking h-[24px] sm:h-[36px] md:h-[60px] align-middle sm:align-bottom fill-[#F7AB0A]/50 w-auto"
+          >
+            <rect width="20" height="75" />
+          </svg>
+        </p>
 
         <div className="pt-5">
-          <Link href="#about">
+          <a href="#about">
             <button className="heroButton">About</button>
-          </Link>
-          <Link href="#experience">
+          </a>
+          <a href="#experience">
             <button className="heroButton">Experience</button>
-          </Link>
-          <Link href="#skills">
+          </a>
+          <a href="#skills">
             <button className="heroButton">Skills</button>
-          </Link>
-          <Link href="#projects">
+          </a>
+          <a href="#projects">
             <button className="heroButton">Projects</button>
-          </Link>
+          </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

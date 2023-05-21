@@ -1,27 +1,30 @@
-import Head from "next/head";
+import { Metadata } from "next";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Experience from "../components/Experience";
+
+export const metadata: Metadata = {
+  title: "Łukaszs Portfolio",
+  description: "Welcome to Next.js",
+};
 
 export default function Home() {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0">
-      <Head>
-        <title>Łukasz's Portfolio</title>
-      </Head>
-
+    <div className="bg-[rgb(36,36,36)] text-white z-0 scroll-smooth overflow:hidden">
       <Header />
 
-      <section id="hero" className="snap-start">
+      <section id="hero" className="md:snap-center">
         <Hero />
       </section>
 
-      {/* About */}
-      <section id="about" className="snap-center">
+      <section id="about" className="md:snap-center">
         <About />
       </section>
 
-      {/* Experience */}
+      <section id="experience" className="md:snap-center">
+        <Experience />
+      </section>
 
       {/* Skills */}
 
