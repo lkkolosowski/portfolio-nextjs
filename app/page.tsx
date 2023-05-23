@@ -14,15 +14,15 @@ export default function Home() {
     <div className="bg-[rgb(36,36,36)] text-white z-0 scroll-smooth overflow:hidden">
       <Header />
 
-      <section id="hero" className="md:snap-center">
+      <section id="hero">
         <Hero />
       </section>
 
-      <section id="about" className="md:snap-center">
+      <section id="about">
         <About />
       </section>
 
-      <section id="experience" className="md:snap-center">
+      <section id="experience">
         <Experience />
       </section>
 
