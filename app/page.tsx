@@ -1,13 +1,8 @@
-import { Metadata } from "next";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Experience from "../components/Experience";
-
-export const metadata: Metadata = {
-  title: "Łukaszs Portfolio",
-  description: "Welcome to Next.js",
-};
+import Skills from "../components/Skills";
 
 export default function Home() {
   return (
@@ -26,7 +21,9 @@ export default function Home() {
         <Experience />
       </section>
 
-      {/* Skills */}
+      <section id="skills">
+        <Skills />
+      </section>
 
       {/* Projects */}
 
