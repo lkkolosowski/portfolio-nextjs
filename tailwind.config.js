@@ -19,6 +19,9 @@ module.exports = {
         blinking: "blinking 1s steps(2, start) infinite",
         pulsing: "pulsing 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
+      colors: {
+        "papa-orange": "#F7AB0A",
+      },
     },
   },
   plugins: [],

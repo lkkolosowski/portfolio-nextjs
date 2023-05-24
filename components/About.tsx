@@ -24,7 +24,9 @@ function About({}: Props) {
             x: 0,
             opacity: 1,
           }}
-          viewport={{ once: true }}
+          viewport={{
+            once: true,
+          }}
           transition={{
             duration: 1.2,
             delay: 0.6,
@@ -50,7 +52,7 @@ function About({}: Props) {
         >
           <h3 className="text-xl sm:text-2xl lg:text-4xl font-semibold">
             Here is a{" "}
-            <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
+            <span className="underline decoration-papa-orange/50">little</span>{" "}
             background
           </h3>
           <p className="text-base xl:text-xl">

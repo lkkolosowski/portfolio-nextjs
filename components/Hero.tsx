@@ -46,7 +46,7 @@ function Hero({}: Props) {
           <svg
             width="20"
             height="75"
-            className="ml-[4px] mr-[4px] sm:ml-[8px] sm:mr-[8px] inline-block animate-blinking h-[24px] sm:h-[36px] md:h-[60px] align-middle sm:align-bottom fill-[#F7AB0A]/50 w-auto"
+            className="ml-[4px] mr-[4px] sm:ml-[8px] sm:mr-[8px] inline-block animate-blinking h-[24px] sm:h-[36px] md:h-[60px] align-middle sm:align-bottom fill-papa-orange/50 w-auto"
           >
             <rect width="20" height="75" />
           </svg>
