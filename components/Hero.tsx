@@ -12,9 +12,9 @@ function Hero({}: Props) {
   const [text] = useTypewriter({
     words: [
       "",
-      "Hi, The Name's Łukasz",
-      "Guy-who-loves-Cycling.tsx",
-      "<ButLovesToCodeMore />",
+      "Hello, my name is Łukasz!",
+      "I loves road cycling.",
+      "But love to code more :)",
     ],
     loop: true,
     delaySpeed: 2000,
